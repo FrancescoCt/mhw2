@@ -177,6 +177,7 @@ button:hover{
 	align-items: center;
 	text-align: center; /*Allineo gli inline elements*/
 	
+	
 	margin: 2px;
 	padding: 10px;
 	
@@ -186,6 +187,7 @@ button:hover{
 	font-size: 80%;
 
 }
+
 .oggetto button{
 	border-radius: 10px;
 	font-size: 80%;

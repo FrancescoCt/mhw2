@@ -42,7 +42,7 @@ const contenuti = [
 		immagine: "repartoUomo.jpeg",
 		nome: 'Reparto',
 		genere: ' Uomo',
-		indirizzo: ' Via Filomena 48- Milano'
+		indirizzo: ' Via Filo 48- Catania'
 		
 	},
 	{
@@ -51,7 +51,7 @@ const contenuti = [
 		immagine: "repartoDonna.jpg",
 		nome: 'Reparto',
 		genere: ' Donna',
-		indirizzo: ' Via Filomena 48 - Milano'
+		indirizzo: ' Via Filo 48 - Catania'
 		
 	},
 	{
@@ -60,7 +60,7 @@ const contenuti = [
 		immagine: "repartoRagazzo.jpg",
 		nome: 'Reparto',
 		genere: ' Ragazzo',
-		indirizzo: ' Via Capuana 17 - Milano'
+		indirizzo: ' Via Neri 17-Milano'
 		
 	}
 ]
