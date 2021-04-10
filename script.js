@@ -15,6 +15,10 @@ function loadContents(){
 		stella.classList.add('hidden');
 		oggetto.appendChild(stella);
 		
+		const titolo = document.createElement('h2');
+		titolo.innerText = item.titolo;
+		oggetto.appendChild(titolo);
+		
 		const immagine = document.createElement('img');
 		immagine.src = item.immagine;
 		oggetto.appendChild(immagine);
@@ -34,6 +38,12 @@ function loadContents(){
 		const genere = document.createElement('span');
 		genere.innerText = item.genere;
 		didascalia.appendChild(genere);
+		
+
+		const tipo = document.createElement('span');
+		tipo.innerText = item.titolo;
+		didascalia.appendChild(tipo);
+
 		
 		if(conta < 4){										//I prodotti hanno più proprietà rispetto ai reparti, la conta mi serve a capire anche dove mettere le proprietà in più
 			const taglia = document.createElement('span');
@@ -84,6 +94,7 @@ function dettagli(event){
 
 function aggiungi(event){
 	const tasto = event.currentTarget;
+	const titoli = document.querySelectorAll('.oggetto h2');
 	tasto.removeEventListener('click', aggiungi);
 	
 	const titoloPreferiti = document.querySelector('#preferiti h1');
@@ -103,6 +114,9 @@ function aggiungi(event){
 				wrappers[0].appendChild(oggetto);
 			}else {wrappers[1].appendChild(oggetto);}
 			
+			const titolo = document.createElement('h2');
+			titolo.innerText = titoli[i].innerText;
+			oggetto.appendChild(titolo);
 			
 			const immagine=document.createElement('img');
 			immagine.src = images[i].src;
@@ -122,7 +136,6 @@ function aggiungi(event){
 			rimuovi.addEventListener('click', rimozione);
 			oggetto.appendChild(rimuovi);
 			break;
-			
 			} 
 		}
 }
@@ -144,7 +157,6 @@ function rimozione(event){
 	const titoloPreferiti = document.querySelector('#preferiti h1');
 	
 	const pulsante = document.querySelectorAll('.bottone');
-	
 	
 	const codPref = document.querySelectorAll('.elemento h3');
 	
@@ -185,31 +197,33 @@ function filtra(event){
 	const sezFiltrati = document.createElement('div');
 	sezFiltrati.classList.add('filtrati');
 	corpo.insertBefore(sezFiltrati, primaSezione);
-	
-	let index = 0;
     	
 		for(let obj of oggetti){
 			
 			//Ricerca degli elementi: appena si trova un abbinamento con un oggetto del divisore viene creato un div di classe 'cercato' che viene posizionato nella sezione filtrati tramite appendChild
 			
-			if(obj.childNodes[3].innerText.toLowerCase().includes(searchString)){
+			if(obj.childNodes[4].innerText.toLowerCase().includes(searchString)){
 
 				
 				const oggetto1 = document.createElement('div'); 
 				oggetto1.classList.add('cercato');
 				sezFiltrati.appendChild(oggetto1);
-			
+				
+				const titolo = document.createElement('h2'); 
+				titolo.innerText = obj.childNodes[1].innerText;
+				oggetto1.appendChild(titolo);
+				
 				const immagine1 = document.createElement('img');
-				immagine1.src = obj.childNodes[1].src;
+				immagine1.src = obj.childNodes[2].src;
 				oggetto1.appendChild(immagine1);
 				
 				const codice1 = document.createElement('h3');
-				codice1.textContent = obj.childNodes[2].textContent;
+				codice1.textContent = obj.childNodes[3].textContent;
 				oggetto1.appendChild(codice1);
 		
 				const didascalia1 = document.createElement('article');
 				
-				didascalia1.textContent = obj.childNodes[3].textContent;
+				didascalia1.textContent = obj.childNodes[4].textContent;
 				oggetto1.appendChild(didascalia1);
 				
 				//In pratica ad ogni lettera aggiunta nella barra di ricerca si crea un nuovo div classe filtrati,
@@ -230,7 +244,6 @@ function filtra(event){
 					}
 				}
 			}
-			index++;
 		}
 }
 
@@ -285,10 +298,11 @@ search.addEventListener('keyup', filtra);
 //Legenda dei childNodes degli oggetti nel div, quelli senza niente sono #text che non mi servono (spiega il perchè ho usato certi childNodes piuttosto che altri nella funzione filtra())
 /*let k = 0;
 console.log(oggetti[k].childNodes[0]);//div con background stella
-console.log(oggetti[k].childNodes[1]);//immagine dell'oggetto
-console.log(oggetti[k].childNodes[2]);//h3 con il codice
-console.log(oggetti[k].childNodes[3]);//article con la descrizione dell'oggetto (gli elementi sono presi da contents)
-console.log(oggetti[k].childNodes[4]);//bottone preferiti
+console.log(oggetti[k].childNodes[1]);//Titolo dell'oggetto
+console.log(oggetti[k].childNodes[2]);//immagine dell'oggetto
+console.log(oggetti[k].childNodes[3]);//h3 con il codice
+console.log(oggetti[k].childNodes[4]);//article con la descrizione dell'oggetto (gli elementi sono presi da contents)
+console.log(oggetti[k].childNodes[5]);//bottone preferiti
 */
 
 /*

@@ -1,5 +1,6 @@
 const contenuti = [
 	{
+		titolo: ' Street',
 		codice: '1',
 		immagine: "repartoUomo.jpeg",
 		nome: 'Reparto',
@@ -8,6 +9,7 @@ const contenuti = [
 		
 	},
 	{
+		titolo: ' Classico',
 		codice: '2',
 		immagine: "repartoDonna.jpg",
 		nome: 'Reparto',
@@ -16,6 +18,7 @@ const contenuti = [
 		
 	},
 	{
+		titolo: ' Urbano',
 		codice: '3',
 		immagine: "repartoRagazzo.jpg",
 		nome: 'Reparto',
@@ -24,6 +27,7 @@ const contenuti = [
 		
 	},
 	{
+		titolo: ' Artistico',
 		codice: '4',
 		immagine: "repartoUomo.jpeg",
 		nome: 'Reparto',
@@ -32,6 +36,7 @@ const contenuti = [
 		
 	},
 	{
+		titolo: ' Elegante',
 		codice: '5',
 		immagine: "repartoDonna.jpg",
 		nome: 'Reparto',
@@ -40,6 +45,7 @@ const contenuti = [
 		
 	},
 	{
+		titolo: ' Scolastico',
 		codice: '6',
 		immagine: "repartoRagazzo.jpg",
 		nome: 'Reparto',
@@ -48,6 +54,7 @@ const contenuti = [
 		
 	},
 	{
+		titolo: ' Classico',
 		codice: '7',
 		immagine: "repartoUomo.jpeg",
 		nome: 'Reparto',
@@ -56,6 +63,7 @@ const contenuti = [
 		
 	},
 	{
+		titolo: ' Classico',
 		codice: '8',
 		immagine: "repartoDonna.jpg",
 		nome: 'Reparto',
@@ -64,6 +72,7 @@ const contenuti = [
 		
 	},
 	{
+		titolo: ' Classico',
 		codice: '9',
 		immagine: "repartoRagazzo.jpg",
 		nome: 'Reparto',

@@ -1,5 +1,6 @@
 const contenuti = [
 	{
+		titolo: ' Casual',
 		codice: '1',
 		immagine: "magliettaRagazzo.jfif",
 		nome: 'Maglietta',
@@ -9,6 +10,7 @@ const contenuti = [
 	},
 	
 	{
+		titolo: ' Estivo',
 		codice: '2',
 		immagine: "magliettaRagazzo1.jfif",
 		nome: 'Maglietta',
@@ -17,6 +19,7 @@ const contenuti = [
 		prezzo: '15€'
 	},
 	{
+		titolo: ' Street',
 		codice: '3',
 		immagine: "felpa.jfif",
 		nome: 'Felpa',
@@ -25,6 +28,7 @@ const contenuti = [
 		prezzo: '25€'
 	},
 	{
+		titolo: ' Casual',
 		codice: '4',
 		immagine: "magliettaRagazza.jfif",
 		nome: 'Maglietta',
@@ -33,6 +37,7 @@ const contenuti = [
 		prezzo: '18€'
 	},
 	{
+		titolo: ' Classico',
 		codice: '5',
 		immagine: "repartoUomo.jpeg",
 		nome: 'Reparto',
@@ -41,6 +46,7 @@ const contenuti = [
 		
 	},
 	{
+		titolo: ' Casual',
 		codice: '6',
 		immagine: "repartoDonna.jpg",
 		nome: 'Reparto',
@@ -49,6 +55,7 @@ const contenuti = [
 		
 	},
 	{
+		titolo: ' Classico',
 		codice: '7',
 		immagine: "repartoRagazzo.jpg",
 		nome: 'Reparto',
