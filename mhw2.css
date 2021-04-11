@@ -750,16 +750,17 @@ proposti da Chrome
     }
 	section{
         width: 240px;
-		height: 5600px;/**/
+		height: 6300px;/**/
     }
 	.divisore{
         width: 240px;
-		height: 1430px;
+		height: 1490px;/**/
 		flex-direction: column;
     }
 	.overlay {
 		display: flex;
 		flex-direction: column;
+		height: 100%;
 	}
 	
 	.divisore img{
@@ -811,7 +812,7 @@ proposti da Chrome
         font-size: 14px;
 		line-height: 40px;
 		
-        height: 200px;
+        height: 230px;
 		width: 250px;
 		padding: 2px;
 		
