@@ -203,8 +203,6 @@ function filtra(event){
 	const sezFiltrati = document.createElement('div');
 	sezFiltrati.classList.add('filtrati');
 	corpo.insertBefore(sezFiltrati, primaSezione);
-	
-	let index = 0;
     	
 		for(let obj of oggetti){
 			
@@ -252,7 +250,14 @@ function filtra(event){
 					}
 				}
 			}
-			index++;
+		}
+		if(searchString == ''){
+			const filtraggio = document.querySelectorAll('.filtrati');
+			console.log('Stringa vuota');
+			for(let item of filtraggio){
+				
+						item.remove();
+			}
 		}
 }
 

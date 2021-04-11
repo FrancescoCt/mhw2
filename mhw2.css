@@ -196,6 +196,7 @@ button:hover{
 	
 }
 
+
 .divisore img{
 	width: 80%;
 	border-radius: 50px;
@@ -493,7 +494,8 @@ em {
 	padding: 5px;
 	
 	display: flex;
-	flex-direction: column;
+	flex-direction: column; /*Mettici row quando usi la flex-wrapper: wrap*/
+	/*flex-wrap: wrap;*/
 	align-items: center;
 	
 	width: 80%;

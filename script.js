@@ -101,7 +101,7 @@ function aggiungi(event){
 	titoloPreferiti.classList.remove('hidden');							//Rendo visibile il titolo della sezione preferiti
 	
 	const wrappers = document.querySelectorAll('.wrapper');
-		
+	/*const preferiti = document.querySelector('#preferiti');*//*Nel caso volessi usare la flex-wrapper: wrap, non lo faccio per motivi di tempo in quanto il titolo si storpia troppo*/	
 	for(let i = 0; i<N; i++){
 		
 		if(tasto == tasti[i]){ 
@@ -110,9 +110,10 @@ function aggiungi(event){
 			const oggetto = document.createElement('div'); 
 				
 			oggetto.classList.add('elemento');
-			if(i < 4){													//distribuisco i preferiti aggiunti sui wrapper appositi
+			 if(i < 4){													//distribuisco i preferiti aggiunti sui wrapper appositi
 				wrappers[0].appendChild(oggetto);
 			}else {wrappers[1].appendChild(oggetto);}
+			/*preferiti.appendChild(oggetto);*//*Devo usare la flex: wrap*/
 			
 			const titolo = document.createElement('h2');
 			titolo.innerText = titoli[i].innerText;
@@ -197,7 +198,7 @@ function filtra(event){
 	const sezFiltrati = document.createElement('div');
 	sezFiltrati.classList.add('filtrati');
 	corpo.insertBefore(sezFiltrati, primaSezione);
-    	
+		
 		for(let obj of oggetti){
 			
 			//Ricerca degli elementi: appena si trova un abbinamento con un oggetto del divisore viene creato un div di classe 'cercato' che viene posizionato nella sezione filtrati tramite appendChild
@@ -243,6 +244,14 @@ function filtra(event){
 						break;
 					}
 				}
+			}
+		}
+		if(searchString == ''){
+			const filtraggio = document.querySelectorAll('.filtrati');
+			console.log('Stringa vuota');
+			for(let item of filtraggio){
+				
+						item.remove();
 			}
 		}
 }
